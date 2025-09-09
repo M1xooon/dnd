@@ -1,0 +1,23 @@
+{
+  "name": "dnd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:M1xooon/dnd.git",
+  "author": "Максим Минин <maxonbbbrt@yandex.ru>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.4",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}

@@ -1,0 +1,79 @@
+:root{
+  --bg: #f4f6f8;
+  --card: #fff;
+  --accent: #2d9cdb;
+  --muted: #7a8a97;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:#111;
+}
+.app{padding:20px;max-width:1100px;margin:0 auto}
+h1{margin:0 0 16px 0;font-size:20px}
+
+/* board layout */
+.board{
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+}
+
+/* column */
+.column{
+  width: 320px;
+  background: #e9eef2;
+  padding:12px;
+  border-radius:8px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.column-header{font-weight:600;margin-bottom:4px}
+.cards{display:flex;flex-direction:column;gap:8px;min-height:60px}
+
+/* card */
+.card{
+  background:var(--card);
+  border-radius:6px;
+  padding:10px;
+  box-shadow:0 1px 2px rgba(0,0,0,0.06);
+  cursor:grab;
+  position:relative;
+  user-select:none;
+}
+.card:active{cursor:grabbing}
+.card .delete{
+  position:absolute;right:8px;top:8px;opacity:0;
+  border:none;background:none;font-size:14px;color:#999;cursor:pointer;
+}
+.card:hover .delete{opacity:1}
+
+/* add button */
+.add-btn{
+  margin-top:6px;padding:8px;border-radius:6px;border:none;background:#fff;cursor:pointer;
+  box-shadow:0 1px 2px rgba(0,0,0,0.04)
+}
+
+/* placeholder */
+.placeholder{
+  height: 56px; /* same as card approx */
+  border:2px dashed #c8d2db;
+  border-radius:6px;
+}
+
+/* dragging ghost */
+.ghost{
+  position:fixed;
+  pointer-events:none;
+  z-index:9999;
+  width: 280px;
+  transform-origin: left top;
+  opacity:0.95;
+}
+
+/* users small tweaks */
+.column-footer{margin-top:auto}
